@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+  <title>Sudoku Project</title>
+  <link rel="icon" href="./images/icon.jpg" />
+  <meta name='viewport' content='width=device-width, initial-scale=1' />
+  <link rel='stylesheet' type='text/css' media='screen' href='main.css' />
+</head>
+<body>
+
+  <!-- Selecting a difficulty level -->
+<div id = "welcome" >
+  <p id="firstT" class = "title">Welcome <span id="helloName" class="title"></span></p>
+  <p id = "secondTitle">Choose Level Difficulty</p><br>
+  <div id="level">
+    <button id = "level1" class="levels" onclick="Easy()">Easy</button>
+    <button id = "level2" class="levels" onclick="Medium()">Medium</button>
+    <button id = "level3" class="levels" onclick="Hard()">Hard</button>
+  </div>
+</div>
+  
+  <!-- Game page -->
+<div id="game" class="centerPage">
+  <div id="lifeDiv"><p id="lifeCount"></p></div>
+  <div id="addtable"></div> <!-- The sudoku appears in this div -->
+    <div>
+      <button class="finishGame" onclick="finish()">Finish</button>
+      <button class="finishGame" onclick="clearBoard()">Clear</button>
+    </div>
+</div>
+
+<!-- Winner's page -->
+<div id="winGame" class="centerPage">
+  <img id="imgWin" src="https://media2.giphy.com/media/fxsqOYnIMEefC/giphy.gif" alt="win gif">
+  <button id="backToGame" class="finishGame" onclick="backToGame()">Play Again</button>
+</div>
+
+<!-- Loser's page -->
+<div id="loseGame" class="centerPage">
+  <img id="imgLose" src="https://media4.giphy.com/media/qSzBP8dl4c1eo/200.gif" alt="lose gif">
+  <button id="backToGame" class="finishGame" onclick="backToGame()">Play Again</button>
+</div>
+
+
+
+  <script src='main.js'></script>
+</body>
+</html>
